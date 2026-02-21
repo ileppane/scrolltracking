@@ -1,0 +1,45 @@
+{{ extends "global/Page.html" }}
+{{ block title }}Your bonus payments{{ endblock }}
+
+{{ block content }}
+
+<p>
+    The computer has randomly chosen round {{ player.randomround }} as the one that determines your bonus. You chose {{ youchose }} on that round and the possible monetary values were £{{ valueup|to2 }} and £{{ valuedown|to2 }}. 
+</p>
+
+<center>
+    £{{ valueup|to2 }}<br>
+    <div id="boxdiv">
+        <div id="valuediv_U"></div>
+    </div>
+    <br>
+    £{{ valuedown|to2 }}<br>
+    <div id="boxdiv">
+        <div id="valuediv_L"></div>
+    </div>
+</center>
+<br>
+
+<p>    
+    The computer has randomly chosen your bonus as £{{ player.bonus|to2 }}.
+</p>
+
+<p>
+    Thank you for your participation! You will receive the bonus payment within a few hours.
+</p>
+
+<br>
+<center>
+    {{ next_button }}
+</center>
+<br><br><br>
+
+{{ endblock }}
+
+{{ block scripts }}
+<script>
+document.getElementById("valuediv_U").style.height = js_vars.V_U;
+document.getElementById("valuediv_L").style.height = js_vars.V_L;
+
+</script>
+{{ endblock }}

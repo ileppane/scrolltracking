@@ -1,0 +1,25 @@
+{{ extends "global/Page.html" }}
+{{ block title }}Scroll tracking demo{{ endblock }}
+
+{{ block content }}
+
+<p>
+    This is a demo of the scroll tracking app in a mobile device. Each decision round presents two options and the user scrolls between them to choose. The app tracks their response in the pixel-time space and calculates metrics that can be used to analyse attention given by the scrolls.
+</p>
+
+<p>
+    Device should be kept in portrait mode. If you are using a non-mobile browser, you can imitate a mobile environment by switching to a "responsive design mode" (e.g. in Firefox: Tools => Browser tools).
+    <br><br>
+    <center>
+    <img src="{{ static 'my_folder/portraitmode.png' }}"/>
+    </center>
+</p>
+<br>
+<center>
+    {{ next_button }}
+</center>
+
+
+<br><br>
+
+{{ endblock }}

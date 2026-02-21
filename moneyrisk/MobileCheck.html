@@ -1,0 +1,35 @@
+{{ extends "global/Page.html" }}
+{{ block title }} {{ endblock }}
+
+{{ block content }}
+
+<p>
+    Touch the screen
+</p>
+<p>
+    If you do not see a button to move on to the next page, then your device is not compatible with the study
+</p>
+<center>
+    <input type="hidden" name="ismobile_touchstart" id="id_ismobile_touchstart">
+    <button id="mobileokbutton" class="otree-btn-next btn btn-primary">Next</button>
+</center>
+
+<br><br>
+{{ if pilot == 1 }}
+    <button class="otree-btn-next btn btn-primary">(pilot)</button>
+{{ endif }}
+
+{{ endblock }}
+
+{{ block scripts }}
+<script>
+// https://codeburst.io/the-only-way-to-detect-touch-with-javascript-7791a3346685
+document.addEventListener('touchstart', function() {
+	document.getElementById('id_ismobile_touchstart').value = 1;
+  	document.getElementById('mobileokbutton').style.visibility = 'visible';
+});
+
+// screen width and height are not collected in this app
+
+</script>
+{{ endblock }}

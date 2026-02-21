@@ -1,0 +1,44 @@
+{{ extends "global/Page.html" }}
+{{ block title }}Practice round feedback{{ endblock }}
+
+{{ block content }}
+
+<p>
+    You chose option {{ choice }}, where you have an equal chance of getting either £{{ choicevalU|to2 }} or £{{ choicevalL|to2 }}.
+</p>
+<br>
+
+<center>
+    £{{ choicevalU|to2 }}<br>
+    <div id="boxdiv">
+        <div id="valuediv_U"></div>
+    </div>
+    <br>
+    £{{ choicevalL|to2 }}<br>
+    <div id="boxdiv">
+        <div id="valuediv_L"></div>
+    </div>
+</center>
+<br>
+
+{{ if lastpractice }}
+    <p>
+        This was the last practice round. After this all rounds may count towards your bonus payment. You will <b>not receive feedback</b> after each round anymore.
+    </p>
+{{ endif }}
+
+<br>
+<center>
+    {{ next_button }}
+</center>
+<br><br><br><br><br>
+
+{{ endblock }}
+
+{{ block scripts }}
+<script>
+document.getElementById("valuediv_U").style.height = js_vars.V_U;
+document.getElementById("valuediv_L").style.height = js_vars.V_L;
+
+</script>
+{{ endblock }}

@@ -1,0 +1,64 @@
+{{ extends "global/Page.html" }}
+{{ block title }}Decision making task{{ endblock }}
+
+{{ block content }}
+
+<p>
+    Welcome to this decision making task. You will next face {{ C.NUM_ROUNDS }} rounds of decisions that will determine your bonus payments from the study. Please read the instructions here carefully.
+</p>
+
+<p>
+    On each round you have two options that contain uncertainty. See below for an example of one option that will be presented to you.
+</p>
+
+<center>
+    <div id="boxdiv">
+        <div id="valuediv_UL"></div>
+    </div>
+    <br>
+    <div id="boxdiv">
+        <div id="valuediv_LL"></div>
+    </div>
+</center>
+
+<br>
+<p>
+    In this example the two blue bars represent money. The higher the bar, the more money it means. The maximum amount of money is £5. If the bar is at the midpoint, that means £2.50. In the above example, the top bar is £4 and the bottom bar is £1.50. The bar heights vary randomly between rounds, i.e. you will be presented with options that have varying levels of money attached.
+</p>
+
+<p>
+    There are two blue bars in each option because the computer will randomly choose either of these bars as the final outcome that pays your bonus. In the example above you have an equal chance of getting either £4 or £1.50.
+</p>
+
+<h2>
+    Your task
+</h2>
+<p>
+    You will be choosing between pairs of these options. In the end after all the rounds, the computer will randomly choose one round and look at which choice you made on that round. Then, it will randomly choose either of the bars in the option you chose. This will determine your bonus payment from the study.
+</p>
+
+<h2>
+    Practice rounds
+</h2>
+
+<p>
+    The first {{ C.PRACTICE }} rounds are for you to practice and will not be considered in the final randomisation. Please proceed now to the practice rounds after which you will receive more information about the task.
+</p>
+
+<br>
+<center>
+    {{ next_button }}
+</center>
+
+
+<br><br><br>
+
+{{ endblock }}
+
+{{ block scripts }}
+<script>
+document.getElementById("valuediv_UL").style.height = '80px';
+document.getElementById("valuediv_LL").style.height = '30px';
+
+</script>
+{{ endblock }}

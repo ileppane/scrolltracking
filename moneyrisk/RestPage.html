@@ -1,0 +1,16 @@
+{{ extends "global/Page.html" }}
+{{ block title }}Rest{{ endblock }}
+
+{{ block content }}
+
+<p>
+    You have completed {{ player.round_number }} rounds out of a total of {{ C.NUM_ROUNDS }} rounds. You can have a quick rest here.
+</p>
+
+<br>
+<center>
+    {{ next_button }}
+</center>
+<br><br><br>
+
+{{ endblock }}
