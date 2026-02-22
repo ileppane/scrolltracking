@@ -3,11 +3,11 @@
 <p>
 This oTree project demonstrates the scroll tracking method, as detailed <a href="https://users.aalto.fi/~ileppane/scrolltracking.html">here</a>. Apps include:
 
-<li>
-<ul> Demo: scrolltracking_demo_twobuttons</ul>
-<ul> Consumer choice studies: binarychoice_twobuttons (_w for different stimuli)</ul>
-<ul> Money-risk: moneyrisk</ul>
-</li>
+<ul>ç
+<li> Demo: scrolltracking_demo_twobuttons
+<li> Consumer choice studies: binarychoice_twobuttons (_w for different stimuli)
+<li> Money-risk: moneyrisk
+</ul>
 
 </p>
 
